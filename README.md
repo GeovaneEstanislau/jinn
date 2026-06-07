@@ -1,12 +1,12 @@
-Atlas OS
+jinn
 
 Um Sistema Operacional Orientado à Predição
 
 Visão Geral
 
-Atlas OS é um sistema operacional experimental baseado em microkernel, projetado para explorar novos paradigmas de desempenho, estabilidade e gerenciamento inteligente de recursos.
+jinn é um sistema operacional experimental baseado em microkernel, projetado para explorar novos paradigmas de desempenho, estabilidade e gerenciamento inteligente de recursos.
 
-Enquanto sistemas operacionais tradicionais concentram grande parte de suas funções dentro do kernel, o Atlas OS propõe uma arquitetura orientada a serviços, onde apenas os componentes estritamente essenciais permanecem em modo privilegiado.
+Enquanto sistemas operacionais tradicionais concentram grande parte de suas funções dentro do kernel, o jinn propõe uma arquitetura orientada a serviços, onde apenas os componentes estritamente essenciais permanecem em modo privilegiado.
 
 O objetivo não é substituir sistemas existentes no curto prazo, mas pesquisar e desenvolver novas formas de interação entre software, hardware e gerenciamento de recursos computacionais.
 
@@ -24,7 +24,7 @@ Embora tenham evoluído enormemente, diversos desafios permanecem:
 - Falhas em drivers capazes de comprometer todo o sistema.
 - Pouca exploração de mecanismos preditivos em nível de sistema operacional.
 
-Atlas OS nasce da seguinte pergunta:
+jinn nasce da seguinte pergunta:
 
 "Se estivéssemos projetando um sistema operacional moderno do zero, aproveitando tudo o que aprendemos sobre paralelismo, cache, predição e isolamento, como ele seria?"
 
@@ -63,7 +63,7 @@ Benefícios:
 
 3. Sistema Orientado a Eventos
 
-Atlas OS será construído sobre comunicação por mensagens.
+jinn será construído sobre comunicação por mensagens.
 
 Eventos substituirão grande parte das chamadas diretas entre componentes.
 
@@ -131,7 +131,7 @@ Executadas em espaço de usuário tradicional.
 
 Predictive Engine
 
-O Predictive Engine é um dos pilares do Atlas OS.
+O Predictive Engine é um dos pilares do jinn.
 
 Funções previstas:
 
@@ -164,7 +164,7 @@ O Predictive Pool armazenará recursos antecipadamente carregados pelo Predictiv
 
 Segurança
 
-Atlas OS adotará uma filosofia de confiança mínima.
+jinn adotará uma filosofia de confiança mínima.
 
 Nenhum componente será considerado confiável por padrão.
 
@@ -208,7 +208,7 @@ A licença definitiva será definida após as primeiras versões públicas.
 
 Convite à Comunidade
 
-Atlas OS é um projeto de pesquisa aberto.
+jinn é um projeto de pesquisa aberto.
 
 Programadores, pesquisadores, estudantes e entusiastas são convidados a contribuir com ideias, documentação, testes e desenvolvimento.
 
