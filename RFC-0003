@@ -1,28 +1,28 @@
 RFC-0003
 
-Atlas IPC (Inter Process Communication)
+jinn IPC (Inter Process Communication)
 
 Status: Proposta
 
 Versão: 0.1
 
-Autor: Comunidade Atlas OS
+Autor: Comunidade jinn
 
 ---
 
 Resumo
 
-Este documento define o protocolo de comunicação entre processos e serviços do Atlas OS.
+Este documento define o protocolo de comunicação entre processos e serviços do jinn.
 
-Toda interação entre módulos externos ao kernel deverá ocorrer através do Atlas IPC.
+Toda interação entre módulos externos ao kernel deverá ocorrer através do jinn IPC.
 
-O IPC é considerado um componente central da arquitetura Atlas.
+O IPC é considerado um componente central da arquitetura jinn.
 
 ---
 
 Objetivos
 
-O Atlas IPC deve:
+O jinn IPC deve:
 
 - Ser rápido.
 - Ser seguro.
@@ -175,7 +175,7 @@ Shared Memory
 
 Mensagens grandes não devem ser copiadas.
 
-O Atlas IPC deverá permitir:
+O jinn IPC deverá permitir:
 
 Shared Memory Regions
 
