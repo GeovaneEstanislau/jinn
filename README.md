@@ -1,215 +1,226 @@
-jinn
+# 🧞 Jinn OS
 
-Um Sistema Operacional Orientado à Predição
+### O Sistema Operacional Que Antecede Suas Necessidades
 
-Visão Geral
+Um sistema operacional experimental orientado à predição, modularidade e resiliência.
 
-jinn é um sistema operacional experimental baseado em microkernel, projetado para explorar novos paradigmas de desempenho, estabilidade e gerenciamento inteligente de recursos.
+O Jinn não foi criado para repetir os paradigmas dos sistemas operacionais modernos.
 
-Enquanto sistemas operacionais tradicionais concentram grande parte de suas funções dentro do kernel, o jinn propõe uma arquitetura orientada a serviços, onde apenas os componentes estritamente essenciais permanecem em modo privilegiado.
+Ele nasceu de uma pergunta simples:
 
-O objetivo não é substituir sistemas existentes no curto prazo, mas pesquisar e desenvolver novas formas de interação entre software, hardware e gerenciamento de recursos computacionais.
-
----
-
-Motivação
-
-Os sistemas operacionais modernos foram construídos em torno de modelos concebidos há décadas.
-
-Embora tenham evoluído enormemente, diversos desafios permanecem:
-
-- Latência de acesso à memória.
-- Sobrecarga causada por múltiplas camadas de abstração.
-- Dependência excessiva de componentes executando em modo privilegiado.
-- Falhas em drivers capazes de comprometer todo o sistema.
-- Pouca exploração de mecanismos preditivos em nível de sistema operacional.
-
-jinn nasce da seguinte pergunta:
-
-"Se estivéssemos projetando um sistema operacional moderno do zero, aproveitando tudo o que aprendemos sobre paralelismo, cache, predição e isolamento, como ele seria?"
+> **Se estivéssemos projetando um sistema operacional do zero hoje, aproveitando tudo o que aprendemos sobre paralelismo, isolamento, cache, predição e arquitetura moderna, como ele seria?**
 
 ---
 
-Princípios Fundamentais
+## 🌙 A Filosofia do Jinn
 
-1. Kernel Mínimo
+Nos contos das Mil e Uma Noites, os Jinn eram entidades capazes de agir antes mesmo de serem percebidas.
 
-O kernel deve ser o menor possível.
+O Jinn OS busca aplicar essa mesma filosofia à computação moderna.
+
+Em vez de apenas reagir às solicitações do usuário, o sistema procura:
+
+* Antecipar demandas
+* Preparar recursos
+* Reduzir latências
+* Isolar falhas
+* Adaptar-se ao ambiente onde está executando
+
+O objetivo é transformar o sistema operacional em um coordenador inteligente de recursos, e não apenas em um intermediário entre hardware e software.
+
+---
+
+## ⚡ Principais Conceitos
+
+### 🔹 Microkernel
+
+O núcleo do sistema é reduzido ao mínimo necessário.
 
 Responsabilidades do kernel:
 
-- Escalonamento de processos.
-- Comunicação entre serviços.
-- Gerenciamento básico de memória.
-- Segurança e isolamento.
-- Coordenação de núcleos de processamento.
+* Escalonamento
+* IPC (Inter Process Communication)
+* Gerenciamento básico de memória
+* Segurança
+* Coordenação de CPUs
 
-Todo o restante deve ser executado fora do kernel.
+Todo o restante é executado fora do kernel.
 
 ---
 
-2. Tudo é um Serviço
+### 🔹 Tudo é um Serviço
 
-Drivers, rede, sistema de arquivos e outros subsistemas devem operar como serviços independentes.
+Drivers, rede, sistema de arquivos e subsistemas são executados como serviços independentes.
 
 Benefícios:
 
-- Reinicialização individual de componentes.
-- Maior estabilidade.
-- Menor superfície de ataque.
-- Atualizações sem reinicialização completa.
+✅ Atualizações sem reinicialização completa
+
+✅ Menor superfície de ataque
+
+✅ Recuperação automática de falhas
+
+✅ Maior estabilidade
 
 ---
 
-3. Sistema Orientado a Eventos
+### 🔹 Predição Como Recurso Nativo
 
-jinn será construído sobre comunicação por mensagens.
+O Jinn trata predição como um componente de primeira classe.
 
-Eventos substituirão grande parte das chamadas diretas entre componentes.
+O sistema poderá:
 
----
+* Antecipar carregamentos
+* Aquecer caches
+* Pré-alocar recursos
+* Preparar serviços antes da demanda
 
-4. Predição Como Recurso de Primeira Classe
+Não se trata necessariamente de inteligência artificial.
 
-O sistema deve ser capaz de antecipar comportamentos.
-
-Objetivos:
-
-- Reduzir latência.
-- Pré-carregar módulos.
-- Aquecer caches.
-- Pré-alocar recursos.
-
-A predição deve ser considerada um serviço nativo do sistema.
+Trata-se de reduzir espera através de observação e análise comportamental.
 
 ---
 
-Arquitetura
+## 🏛 Arquitetura
 
-Camada 0 — Microkernel
+### Camada 0 — Microkernel
 
-Componentes:
-
-- Scheduler
-- IPC Core
-- Security Core
-- Memory Core
+* Scheduler Core
+* IPC Core
+* Security Core
+* Memory Core
 
 ---
 
-Camada 1 — Serviços do Sistema
+### Camada 1 — Serviços do Sistema
 
-Componentes planejados:
-
-- Filesystem Service
-- Network Service
-- Driver Manager
-- Cache Manager
-- Predictive Engine
-- Process Supervisor
+* Process Supervisor
+* Driver Manager
+* Network Service
+* Filesystem Service
+* Cache Manager
+* Predictive Engine
 
 ---
 
-Camada 2 — Drivers
+### Camada 2 — Drivers
 
-Cada driver será executado como um serviço isolado.
+Todos os drivers operam isoladamente:
 
-Exemplos:
-
-- GPU Service
-- USB Service
-- Audio Service
-- Storage Service
+* GPU Service
+* USB Service
+* Audio Service
+* Storage Service
 
 ---
 
-Camada 3 — Aplicações
+### Camada 3 — Aplicações
 
-Executadas em espaço de usuário tradicional.
-
----
-
-Predictive Engine
-
-O Predictive Engine é um dos pilares do jinn.
-
-Funções previstas:
-
-- Monitorar padrões de uso.
-- Detectar dependências entre processos.
-- Antecipar carregamentos.
-- Realizar prefetch de recursos.
-- Preparar estruturas de memória antes da demanda.
-
-O objetivo não é utilizar inteligência artificial obrigatoriamente, mas construir mecanismos capazes de reduzir tempos de espera através de observação e aprendizado estatístico.
+Aplicações executadas em espaço de usuário tradicional.
 
 ---
 
-Modelo de Memória
+## 🧠 Adaptive Policy Scheduler
 
-Estrutura conceitual:
+Uma das características mais experimentais do Jinn.
 
-RAM
+Em vez de utilizar uma única política de escalonamento para todos os cenários, o sistema poderá adaptar seu comportamento ao ambiente onde está sendo executado.
 
-- Kernel Space
-- Service Space
-- User Space
-- Predictive Pool
-- DMA Pool
-- Cache Pool
+Perfis planejados:
 
-O Predictive Pool armazenará recursos antecipadamente carregados pelo Predictive Engine.
+### 🖥️ Aladdin
 
----
+Desktop e Workstations
 
-Segurança
+### 🏢 Sinbad
 
-jinn adotará uma filosofia de confiança mínima.
+Servidores e Infraestrutura
 
-Nenhum componente será considerado confiável por padrão.
+### 🏭 Ifrit
 
-Todo acesso deverá ser explicitamente autorizado.
+Sistemas Industriais
 
----
+### ⚙️ Marid
 
-Objetivos da Versão 0.1
-
-- Inicialização do sistema.
-- Escalonador funcional.
-- IPC básico.
-- Gerenciamento mínimo de memória.
-- Sistema de logs.
+Computação de Alto Desempenho (HPC)
 
 ---
 
-Objetivos da Versão 0.2
+## 🚀 Roadmap
 
-- Serviços externos ao kernel.
-- Reinicialização automática de módulos.
-- Monitoramento de falhas.
+### Jinn 0.0.1
+
+* Boot via Limine
+* VGA Text Mode
+* Logger
+* IDT
+* Memory Map
+
+### Jinn 0.0.2
+
+* Physical Memory Manager
+* Heap
+* Service Registry
+
+### Jinn 0.0.3
+
+* IPC Experimental
+
+### Jinn 0.0.4
+
+* Supervisor de Serviços
+
+### Jinn 0.0.5
+
+* Scheduler Adaptativo
+
+### Jinn 0.1
+
+Primeira versão funcional de pesquisa.
 
 ---
 
-Objetivos da Versão 0.3
+## 🛠 Tecnologias
 
-- Predictive Engine experimental.
-- Pools de memória especializados.
-- Estatísticas de comportamento.
-
----
-
-Licença
-
-Projeto open source.
-
-A licença definitiva será definida após as primeiras versões públicas.
+* Rust
+* Limine Bootloader
+* QEMU
+* x86_64
+* GitHub Actions (planejado)
 
 ---
 
-Convite à Comunidade
+## 🌍 Objetivo
 
-jinn é um projeto de pesquisa aberto.
+O Jinn não pretende ser apenas mais uma distribuição ou mais um kernel experimental.
 
-Programadores, pesquisadores, estudantes e entusiastas são convidados a contribuir com ideias, documentação, testes e desenvolvimento.
+Ele existe para explorar novas possibilidades para os sistemas operacionais das próximas décadas.
 
-O objetivo não é apenas construir mais um sistema operacional, mas explorar novas possibilidades para os sistemas operacionais das próximas décadas.
+---
+
+## 🤝 Contribuindo
+
+Pesquisadores, estudantes, desenvolvedores e entusiastas são bem-vindos.
+
+Se você gosta de:
+
+* Sistemas Operacionais
+* Arquitetura de Computadores
+* Microkernels
+* Compiladores
+* Sistemas Distribuídos
+* Pesquisa em Desempenho
+
+Você está convidado a participar da construção do Jinn.
+
+---
+
+## 📜 Licença
+
+A licença definitiva será definida após a publicação das primeiras versões funcionais.
+
+---
+
+### ✨ Jinn OS
+
+*"O melhor momento para carregar um recurso é antes que ele seja necessário."*
