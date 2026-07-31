@@ -71,6 +71,10 @@ Jinn é um sistema operacional experimental em Rust para `x86_64`, projetado com
 
 - Veja `LICENSE` para os termos do projeto
 
+## Versão em Inglês
+
+- [README_EN.md](README_EN.md)
+
 ## Observações
 
 - Arquivos de build e logs são filtrados pelo `.gitignore`
